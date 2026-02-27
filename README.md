@@ -2,16 +2,19 @@
 
 
 1. The business motivation for your project.
- [Pavi]
+ [Pavi, submit tonight]
+
 2. Which dataset you have chosen to use.
- [Pavi]
+ [Pavi, submit tonight]
+
 3. Risks or unknowns that you have identified.
-[Mary]
+[Mary, Friday EOD]
+
 4. How you will approach the analysis.
-[Nicole]
+[Nicole, Saturday EOD]
 
 5. Breakdown of roles/tasks assigned to each team member - see project task break down below
-[Aram]
+[Aram, Sunday 2 pm]
 
 
 Project Plan
@@ -40,6 +43,12 @@ Create .venv
     requirement.txt file from visualiation module [Mary]
     copy it into D6_RETAIL... folder
 
+code:
+uv venv --python 3.11
+uv pip install -r requirements.txt 
+
+
+
 if we see underline under a library comment, it would tell us what packages we are missing. we can then use following command:
     use uv pip install <package name>
 
@@ -51,35 +60,53 @@ EVERYONE: after clone/fetch from Main you can get the updated file (requierement
     Project Plan
     Task Break-Down
     
-
+    README  file for Monday [Aram, Sunday; Mary to review after Aram
 
     1- Data Cleanup (may include data processing)
     Mary [core work]
     Nicole [reviewer, update if needed]
 
     2- Exploratory Analysis
-        part 1 use visualization to get sense of data [Junaid]
-        part 2 in de[th analsysis [Junaid]
+        use visualization to get sense of data 
+        in depth analsysis (plotting variables, check for outliers, check for any correlation) [Junaid, Saturday EOD]
+        Review by Mary [Sunday]
 
     3- Data Processing, if needed 
     Nicole [ continue from ]
     Aram]
 
+    4- Classification [Nicole, Saturday + Aram's Review, Sunday]
     
-    4- Classification 
+    5- Training and Cross-Validation [Nicole + Aram's Review Sunday]
 
-    5- Training and Cross-Validation
+    6- Reproducibility [Aram; Review by Junaid]
 
-    6- Reproducibility
-
-    7- Visulation
+    7- Visulation [Pavi + Junaid]
         select style
 
+    8- Final Cleanup of Folders
+        remove duplicate plots, ...
+
+Good Project Example: 
+https://github.com/sunshinesharon/Customer-Purchasing-Behaviors
 
 
-    Asssign based on availabilites
-    Mary's prime time: between now and Sunday
-        Data Cleaning and Exploratory Analysis
+For Final Readme for final submission: 
+
+Crafting a Comprehensive Main README File (slide 31-33 of first project session)
+
+Purpose & Overview:
+    Introduce the project with essential details, concise descriptionand a project objective.
+Goals & Objectives:
+    Articulate what the project aims to achieve.
+Techniques & Technologies:
+    Highlight the tools and methods used.
+Key Findings & Instructions:
+    Summarize outcomes and provide setup instructions.
+Visuals & Credits:
+    Enhance with visuals; acknowledge contributors.
+
+
 
 
     
