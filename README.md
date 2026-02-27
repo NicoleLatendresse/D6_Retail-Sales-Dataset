@@ -1,11 +1,25 @@
 # D6_Retail-Sales-Dataset
 
+# Retail Sales Behaviour Predition 
+Data Science Certificate Cohort 8 - Group 6 
 
-1. The business motivation for your project.
- [Pavi, submit tonight]
+## Group Members: 
 
-2. Which dataset you have chosen to use.
- [Pavi, submit tonight]
+* Aram Dezfuli
+* Junaid Ghani
+* Nicole Latendresse
+* Mary Randle
+* Pavi Chandrasegaram
+
+
+## Business Motivation 
+The goal of this project is to develop a classification model to predict the product category a customer most likely is to purchase based on demographic attributes, such as age and gender/sex, and their previous purchasing history.  
+
+The insights from this analysis will then inform and enhance the business strategies to increase customer engagement by supporting the development of targeted product recommendations, tailored marketing campaigns to provide personalized customer interactions which in turn will increase customer engagements and ultimately drive higher sales. 
+
+
+## Source
+The dataset  used in this project is the Retail Sales Dataset from Kaggle: https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
 
 3. Risks or unknowns that you have identified.
 [Mary, Friday EOD]
