@@ -43,7 +43,7 @@ The dataset  used in this project is the Retail Sales Dataset from Kaggle: https
 
 
 4. How you will approach the analysis.
-[Nicole, Saturday EOD]
+Analyze the dataset using 2 different classification methods (logistic regression and random forest). Evaluate the performance of each model using cross-validation, then fit the best performing model to the training dataset and evaluate using a confusion matrix. 
 
 5. Breakdown of roles/tasks assigned to each team member - see project task break down below
 [Aram, Sunday 2 pm]
