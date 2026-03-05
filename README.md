@@ -21,104 +21,211 @@ The insights from this analysis will then inform and enhance the business strate
 ## Source
 The dataset  used in this project is the Retail Sales Dataset from Kaggle: https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
 
-3. Risks or unknowns that you have identified.
-[Mary, Friday EOD]
 
-4. How you will approach the analysis.
-[Nicole, Saturday EOD]
+## Risks or Unknowns Identified
 
-5. Breakdown of roles/tasks assigned to each team member - see project task break down below
-[Aram, Sunday 2 pm]
+1. A lot of retail especially in the cateogies of 'Beauty,' 'Clothing' and 'Electonics' would skew more towards either Male or Female as their target demogrpahic. This dataset is very balanced at Female/Male = 510/490. This would be rare in most retail
+
+2. Customer age typically runs the gamut anywhere between as young as 12 to as old as 85, especicially in these generic cateogires which signal a more 'general retailer' but in this dataset the range is only 18-64 which suggests maybe outliers were taken out of the dataset which we don't know
+
+3. 'Beauty', 'Clothing', and 'Electonics' are the only 3 product cateogries in the dataset which seems like an odd mix of categories for any one retailer suggesting cateogires are missing. This would not give a full picture of the total customer basket and customer profile
+
+4. The mean is 2.51 and the range of quantities is only 1-4, there are typically a small portion of customers that would purchase in bulk, stocking up on products or buying for a group of people or a business. Sometimes retailers put on a limit on the max quantity of a product any one customer can purchase, we don't know if this is the cause for the small quantity range 
+
+5. Pricing seems odd for retail with price points of 25,30,50,300,500. Pricing normally has two decemicals such as .99 (24.99, 29.99, etc.). The dataset does not specify if promo pricing, regular pricing, etc. was used 
+
+6. Total amounts for all transactions are exactly the calculation of quantity multiplied by price, but typically there would be tax, service fees, environmental fees, shipping, etc. included in the total price not shown in the retail price
+
+7. There are no missing data points. In retail, it's common for failed transactions to occur, such as failed payment, returns, cancelled orders, etc.
+
+8. 1000 rows and 1000 unique customer IDs means that each customer only transacted once in one year, which might be normal for high price points such as the 300,500, but would be unlikely for the lower price points of 25,30,50, since there would typically be at least a small subset that would be 'loyal/high value customers' which would normally tranact more than once a year for the 'Beauty' and 'Clothing' categories. Does this mean the dataset is limited to just the customer IDs first purchase, the last purchase, etc. Or does the system assign a new customer ID each time a customer transacts? If it truely is only one transaction occured per true unique customer, the dataset is not robust or long enough to support customer lifecycle analysis, any repeat purchasing pattern analysis or repeat purchase planning. One transaction per customer limits patterns on customer behavior. 
 
 
-Project Plan
-    
+## Analysis Approach
+To answer our business question, we will frame this as a supervised classification problem. 
+
+We will:
+- Develop two classification models:
+    - Logistic Regression
+    - Random Forest Classifier
+- Evaluate both models using cross-validation
+- Compare performance using relevant factors such as:
+    - Accuracy
+    - Precision
+    - Recall
+    - F1-score
+- Select the best-performing model
+- Evaluate final performance using a confusion matrix
+
+This approach allows us to compare a linear model (logistic regression) with a non-linear ensemble method (random forest) to determine which better captures patterns in customer purchasing behavior.
+
+
+## Project Plan
+
+Our project follows a structured data science workflow:
 1. Understand the business context
-2. Identify an opportunity
-3. Scope your analysis
+2. Identify the analytical opportunity
+3. Define scope and assumptions
+4. Develop predictive models
 
-4. Develop your solution
+### Business Question
 
-5. Present clear results and recommendations
-    
-    Classification: Can we predict the product category a customer is likely to purchase based on their age, gender/sex, and previous purchase history?
+Can we predict the product category a customer is likely to purchase based on age, gender, and purchase-related features?
 
-    What value does your project bring to the industry?
-    
-    How will you answer your business question with your chosen dataset?
-    
-    What are the risks and uncertainties?
-    
-    What methods and technologies will you use?
--------------------
-Tech Setup:
+### Value to Industry
+If successful, this model can:
+- Support targeted marketing campaigns
+- Improve product recommendation systems
+- Enhance customer personalization strategies
+- Increase engagement and conversion rates
 
-Create .venv 
+### Project Risks & Uncertainties
+- Synthetic or simplified dataset structure
+- Limited product categories (3 only)
+- One transaction per customer
+- No missing or real-world noise in data
+- No repeat purchase behavior
+
+These factors may limit generalizability to real-world retail environments.
+
+
+### Project Management Approach
+
+We followed a structured yet iterative workflow. 
+
+The overall project scope and task breakdown were defined upfront; however, modeling and analysis were developed iteratively with continuous review and refinement.
+
+Work was completed in pairs for major task groups. All changes were implemented using feature branches and submitted via pull requests to ensure version control integrity and peer review prior to merging into the main branch.
+
+## Project Task Breakdown & Roles
+
+### 1. README  (Midpoint Submission)
+- Lead – Aram
+- Mary – Review
+- Tasks:
+    - Contents 1-2-3 - Pavi, Mary, Nicole
+    - Other Contents - Aram
+    - Compile - Aram
+    - Review - Mary
+
+### 2. Data Cleanup & Preparation
+- Lead: Mary
+- Reviewer: Nicole
+- Tasks:
+    - Data validation
+    - Feature formatting
+    - Outlier check
+    - Data consistency verification
+
+### 3. Exploratory Data Analysis (EDA)
+- Lead: Junaid
+- Reviewer: Pavi
+- Tasks:
+    - Visual exploration
+    - Distribution analysis
+    - Correlation analysis
+    - Outlier detection
+
+### 4. Feature Engineering & Processing
+- Lead: Nicole – Lead
+- Reviewer: Mary
+- Support: Aram
+- Tasks:
+    - Encoding categorical variables
+    - Scaling if required
+    - Train/test split preparation
+
+### 5. Classification Modeling
+- Lead: Nicole
+- Reviewer: Aram, Junaid
+- Models:
+    - Logistic Regression
+    - Random Forest
+
+### 6. Training & Cross-Validation Implementation
+- Lead: Nicole
+- Reviewer: Aram, Pavi 
+- Tasks
+    - k-fold cross-validation
+    - Model comparison
+    - Performance metrics evaluation
+
+### 7. Visualization & Styling
+- Lead: Pavi
+- Support: Junaid
+- Reviewer: Junaid
+- Tasks:
+    - Plot styling
+    - Clean presentation charts
+    - Model comparison visuals
+
+### 8. Reproducibility & Repository Cleanup
+- Lead: Aram (-> Junaid)
+- Reviewer: Junaid (-> Aram)
+- Tasks: 
+    - Folder structure cleanup
+    - Removing duplicate plots
+    - Ensuring clear README instructions
+    - Requirements.txt validation
+
+### 9. Final Submission - README file 
+- Lead: Aram
+- Reviewer: Mary
+- Tasks: 
+  - Review course slides and provided examples
+  - Confirm submission expectations with instructor and Learning Support (LS)
+  - Draft and structure final README content
+  - Incorporate feedback
+  - Final formatting and repository cleanup
+
+
+### 10. Final Live Presentation 
+- Leads: Pavi, Mary
+- Supports: Junaid, Aram
+
+
+
+
+----------------
+
+## Reference Notes [Remove form final submission]
+### Tech Setup Hints:
+
+1. Create .venv 
     requirement.txt file from visualiation module [Mary]
     copy it into D6_RETAIL... folder
 
-code:
-uv venv --python 3.11
-uv pip install -r requirements.txt 
+2. Run codes:
+    uv venv --python 3.11
+    uv pip install -r requirements.txt 
 
-
-
-if we see underline under a library comment, it would tell us what packages we are missing. we can then use following command:
+3. If we underline under a library command, it would mean what packages we are missing. WE can then use following command:
     use uv pip install <package name>
 
-we'll put .venv inside gitignore file
-
-EVERYONE: after clone/fetch from Main you can get the updated file (requierement.text and gitignore) that Mary pushed up 02-25
 
 ------------------------
-    Project Plan
-    Task Break-Down
     
-    README  file for Monday [Aram, Sunday; Mary to review after Aram
 
-    1- Data Cleanup (may include data processing)
-    Mary [core work]
-    Nicole [reviewer, update if needed]
+### For Final README: 
 
-    2- Exploratory Analysis
-        use visualization to get sense of data 
-        in depth analsysis (plotting variables, check for outliers, check for any correlation) [Junaid, Saturday EOD]
-        Review by Mary [Sunday]
+Crafting a Comprehensive Main README File (see slide 31-33 of first project session)
 
-    3- Data Processing, if needed 
-    Nicole [ continue from ]
-    Aram]
+- Purpose & Overview:
+    Introduce the project with essential details, concise descriptionand a project objective.
+- Goals & Objectives:
+    Articulate what the project aims to achieve.
+- Techniques & Technologies:
+    Highlight the tools and methods used.
+- Key Findings & Instructions:
+    Summarize outcomes and provide setup instructions.
+- Visuals & Credits:
+    Enhance with visuals; acknowledge contributors.
 
-    4- Classification [Nicole, Saturday + Aram's Review, Sunday]
-    
-    5- Training and Cross-Validation [Nicole + Aram's Review Sunday]
-
-    6- Reproducibility [Aram; Review by Junaid]
-
-    7- Visulation [Pavi + Junaid]
-        select style
-
-    8- Final Cleanup of Folders
-        remove duplicate plots, ...
 
 Good Project Example: 
 https://github.com/sunshinesharon/Customer-Purchasing-Behaviors
 
 
-For Final Readme for final submission: 
-
-Crafting a Comprehensive Main README File (slide 31-33 of first project session)
-
-Purpose & Overview:
-    Introduce the project with essential details, concise descriptionand a project objective.
-Goals & Objectives:
-    Articulate what the project aims to achieve.
-Techniques & Technologies:
-    Highlight the tools and methods used.
-Key Findings & Instructions:
-    Summarize outcomes and provide setup instructions.
-Visuals & Credits:
-    Enhance with visuals; acknowledge contributors.
 
 
 
