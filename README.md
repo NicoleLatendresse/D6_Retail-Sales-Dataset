@@ -116,19 +116,49 @@ The dataset was first examined for missing values, and no missing data were dete
 
 # Exploratory Data Analysis
 
-Exploratory data analysis was conducted to understand the distribution of demographic and transactional variables and to identify potential predictive relationships.
+Exploratory data analysis was conducted to understand the distribution of demographic and transactional variables and to identify potential predictive relationships. The dataset consists of 1,000 retail transactions with demographic, product, and purchase information, to conduct an exploratory data analysis.
 
 ### Key Observations
 
-- **Age distribution** is relatively balanced across the dataset but limited to customers aged 18–64.
+	!["Distribution of Key Variables"](images/2D_column_plot3_key_variables.png)
+
+- **Age distribution** across product categories shows broadly similar patterns, with moderate differences in central tendency and spread. Overall, age contributes contextual information that may improve classification performance when combined with other demographic and transactional features.
 - **Purchase quantity** is typically small, with most customers buying three or fewer items.
 - **Price per unit** shows that most purchases are low-value items, with a smaller number of higher-priced transactions.
 - **Total transaction amount** is strongly right-skewed, indicating a small number of high-value purchases.
+These distributional patterns suggest that behavioral variables carry stronger predictive signal than demographics.
+
+
 - **Gender differences** appear primarily in Beauty purchases, which show a female skew.
+	!["Distribution of Product Category by Gender"](images/2D_column_plot4_prodcat_gender.png)
 
 Despite some observable patterns, product categories show significant overlap across demographic and transactional variables.
 
 This suggests that predicting product category will require combining multiple features rather than relying on a single strong predictor.
+
+Overall, Gender improves prediction for only one category but cannot independently determine product choice. Therefore, gender shall be treated as a complementary predictor to enhance model performance when combined with behavioral features such as spending and quantity purchased.
+
+- **Correlation Matrix** highlights the relationships among key numerical predictors and provides insight into potential redundancy and multicollinearity.
+    !["Correlation Matrix"](images/heatmap_plot2_correlationmatrix.png)
+
+Overall, most variables exhibit low to moderate correlation, with one exception.
+
+- **Pair Plot** provides insight into how well these variables separate product categories and whether natural clustering exists.
+    !["Pair Plot"](images/pairplot.png)
+
+Single predictors are insufficient on their own, reinforcing the need for multivariate models rather than rule-based classification.
+
+### Conclusion
+Based on the exploratory data analysis, it is possible to predict the product category a customer is likely to purchase based on their age, gender, and previous purchase history but with significant limitations. <br>
+
+The prediction accuracy will be constrained by:<br>
+> Absence of repeated purchase history <br>
+> Limited behavioral depth at the customer level <br>
+> Overlapping feature distribution across categories. <br>
+
+Considering all of the above, the variables can inform a model to estimate the likelihood of a customer purchasing a specific product category, but predictions should be interpreted probabilistically rather than as absolute outcomes. <br>
+
+For future, richer behavioral data or increased repeat customers to improve purchase history can significantly enhance predictive performance. 
 
 ---
 
