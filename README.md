@@ -51,37 +51,35 @@ Insights from this analysis could help stakeholders better understand how custom
 
 The dataset used in this project is the **Retail Sales Dataset** available on Kaggle.
 
-Source:  
-https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
+**Source:**  https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
 
 ### Dataset Characteristics
-- 1000 retail transactions
-- Each transaction represents a unique customer
-- Product categories include:
+- Contains **1000 retail transactions** each representing a unique customer
+- Includes purchase across three main product categories:
   - Beauty
   - Clothing
   - Electronics
 
 ### Key Features
-- Customer ID
-- Age
-- Gender
-- Product Category
-- Quantity
-- Price per Unit
-- Total Amount
+- **Customer ID:** Unique identifier for each customer
+- **Age:** Age of the customer
+- **Gender:** Customer's gender
+- **Product Category:** Type of product purchased
+- **Quantity:** Number of units purchased
+- **Price per Unit:** Cost of a single unit
+- **Total Amount:** Final amount calculated per transaction
 
 ### Dataset Limitations
 
-Several characteristics of the dataset limit real-world generalization:
+Several characteristics of the dataset limit its real-world generalizability: 
 
-- Each customer appears only once (no repeat purchase history)
-- Only three product categories are represented
-- The dataset contains no missing values or failed transactions
-- Age range is limited (18–64)
+- Each customer appears only once, providing no repeat purchase history or longitudinal behaviour 
+- Only three broad product categories are included restricting diversity in purchasing patterns
+- The dataset contains no missing values or failed transactions, which is uncommon in real operational data
+- Age range is narrow (18–64) reducing demographic breadth
 - Pricing structure appears simplified
 
-These constraints reduce the behavioral depth available for modeling and may impact predictive performance.
+Together, these constraints reduce the depth behavioral signals available for modeling and may impact predictive performance.
 
 ---
 
@@ -89,7 +87,7 @@ These constraints reduce the behavioral depth available for modeling and may imp
 
 The project was implemented using the following tools and libraries:
 
-### Programming Language
+## Programming Language
 - Python
 
 ### Libraries
@@ -108,30 +106,13 @@ The project was implemented using the following tools and libraries:
 
 # Methodology
 
-The project followed a structured data science workflow:
+# Data Cleaning 
 
-1. **Business Understanding**  
-   Define the analytical objective and identify the key prediction problem.
+The dataset was first examined for missing values, and no missing data were detected.  Several preprocessing steps were completed to prepare the data for modeling, which includes:
+    - identify any missing values 
+    - creating new columns for month, day and year from the date fields
+    - constructing age groups and corresponding categorical labels to better segment customer demographics 
 
-2. **Data Exploration and Validation**  
-   Review dataset structure, verify data quality, and identify potential limitations.
-
-3. **Exploratory Data Analysis (EDA)**  
-   Examine distributions, relationships, and potential predictors.
-
-4. **Feature Preparation**  
-   Prepare variables for modeling through encoding and preprocessing.
-
-5. **Model Development**  
-   Train classification models to predict product category.
-
-6. **Model Evaluation**  
-   Assess model performance using standard evaluation metrics.
-
-7. **Visualization and Interpretation**  
-   Communicate insights through clear and accessible visualizations.
-
----
 
 # Exploratory Data Analysis
 
@@ -151,63 +132,66 @@ This suggests that predicting product category will require combining multiple f
 
 ---
 
-# Data Visualization
-
-Data visualization played an important role in both **exploring patterns** and **communicating insights** from the dataset.
-
-Visualizations were created using **Matplotlib, Seaborn, and Plotly**, with attention to readability and accessibility, including color-blind-friendly palettes.
-
-One key visualization is a **stacked bar chart** illustrating the distribution of product category purchases across five age groups:
-
-- 18–24  
-- 25–34  
-- 35–44  
-- 45–54  
-- 55–64  
-
-### Observed Patterns
-
-- Customers aged **45–54** show the highest overall purchasing activity.
-- The **18–24** age group has the lowest purchase counts.
-- **Clothing purchases remain relatively consistent** across age groups.
-- **Electronics purchases increase among middle-age customers**.
-
-Although these visualizations highlight demographic patterns, the distributions still overlap significantly across product categories.
-
----
-
 # Classification Modeling
 
 To predict product category, we implemented a **supervised classification approach** using logistic regression.
 
 ### Model Inputs
 The model used the following predictors:
+    - Age  
+    - Gender  
+    - Transaction-related features (such as purchase date)
 
-- Age  
-- Gender  
-- Transaction-related features (such as purchase amount)
+### Modeling Approach
 
-### Model Evaluation Metrics
-Model performance was evaluated using:
+Two classification models were developed and evaluated: 
+    - Logistic Regression (linear model)
+    - Random Forest Classifier (non-linear model)
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
+Both models were assed using cross-validations, comparing key performance metrics, which included: F1-score, accuracy, precision, recall. 
+
 
 ### Model Performance
 
-- **Accuracy:** ~37%  
-- **F1 Score:** ~0.35  
+The classification model used age, gender, and purchase history to predict the product category a customer was likely to purchase. 
 
-Since there are three product categories, random guessing would yield an expected accuracy of approximately **33%**.
+Using logistic regression, the model achieved and overall accuracy of approximately **37%**, representing the percentage of all predictors that accurately predicted, and F1 score of about 0.35, which reflects the balance between precision and recall.  These results indicate relatively week predive performance. 
 
-The model therefore performs only slightly better than random classification.
+![alt text](images/confusion_matrix.png)
 
-The confusion matrix shows that the model frequently confuses **Clothing and Electronics**, while **Beauty** products are often misclassified into the other categories.
+With three product categories, random guessing would yield an expected accuracy of approximately 33% meaning the model performed only marginally better than chance. The confusion matrix further shows the consistent misclassification patterns: predictions were disproportionately assigned to Clothing or Electronics, which frequent confusion between these two categories. Beauty purchases were often misclassified into one of the other two categories. 
+
+
+# Early Trends Identified  
+
+Data visualization played an important role in both **exploring patterns** and **communicating insights** from the dataset.
+
+Visualizations were created using **Matplotlib, Seaborn, and Plotly**, with attention to readability and accessibility, including color-blind-friendly palettes.
+
+
+One key visualization is a **groped bar chart** illustrating the distribution of product category purchases across five age groups: 18–24, 25–34, 35–44, 45–54 and 55–64.   
+
+![Grouped bar graphs showing Beauty, Clothing, and Electronics purchases across five age-groups for Female and Male customer groups.](images/purchasing_trends_by_age_group.png)
+
+- Customers aged **45–54** show the highest overall purchasing activity.
+- The **18–24** age group has the lowest purchase counts, particularly females purchasing clothing 
+- **Clothing purchases remain relatively consistent** across most age groups.
+- **Electronics purchases increase among middle-age customers**.
+- **Male customers** tend to buy more electronics as they age while **female customers** tend to buy more clothing 
+
+A look at customer behaviour by month, shows some interesting findings, as well
+
+![Line charts showing monthly purchases for Beauty, Clothing, and Electronics for Male and Female customer groups.](images/yearly_purchase_volume.png)
+
+- **Clothing:** Both male and females some seasonal purchasing patterns, but females customers peaks are borader and more consistent, while male cusomters have sharper peaks and more pronouced mid-year dips 
+- **Beauty:** Mainly consistent for both, but slightly higher rise in teh fall months.  
+- **Electronics:** The month-to-month volatity suggest event-driven purchasing.  Both Males and Female cusotmers show large surges (males: May and October; females: August, December) 
+- **Overall**, males purchases in the year are bit more volitaile then  then females trends are bit more consistent espeically fo rbeauty and clothing. 
+
+Although these visualizations highlight demographic patterns, the distributions still overlap significantly across product categories.
 
 ---
+
 
 # Key Findings
 
@@ -226,13 +210,12 @@ These findings suggest that **the available variables are insufficient for stron
 
 For improved predictive performance in real-world applications, future analyses should consider:
 
-- Incorporating **repeat purchase behavior**
-- Expanding the number of **product categories**
-- Including **customer browsing behavior**
-- Adding **temporal information** such as purchase dates
-- Integrating **customer loyalty or engagement metrics**
+- Incorporating **repeat purchase behavior** to capture customer habits and retention patterns.
+- Expanding the number of **product categories** to add more model granularity and reduce bias 
+- Including **customer online browsing behavior** like page views, dwell time, cart interactions, which can meaningfully enhance predictive signals
+- Integrating **customer loyalty or engagement metrics**, including reward status, email engagement, and promotional responsiveness can help differentiate between casual and high value customers 
 
-Richer behavioral data would significantly improve the ability to model customer purchasing patterns.
+Overall, incorporating richer behavioral data would significantly improve the ability to model customer purchasing patterns.
 
 ---
 
