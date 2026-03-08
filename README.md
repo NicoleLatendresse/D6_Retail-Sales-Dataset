@@ -267,7 +267,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 |-----|-----|
 | Aram Dezfuli | https://www.loom.com/share/ac35881ccec34d638c61cb406a73945f |
 | Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
-| Nicole Latendresse | [Video Link](PASTE_LINK_HERE) |
+| Nicole Latendresse | [Video Link](https://www.loom.com/share/8c183674ec5846458100d308bc3607ba) |
 | Mary Randle  | https://youtu.be/yyoIqQcskZo |
 | Pavi Chandrasegaram  | [Video Link](https://www.youtube.com/watch?v=yeGJQYe85bE) |
 
