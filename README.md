@@ -108,7 +108,7 @@ The project was implemented using the following tools and libraries:
 
 # Data Cleaning 
 
-The dataset was first examined for missing values, and no missing data were detected.  Several preprocessing steps were completed to prepare the data for modeling, which includes:
+The dataset was first examined for missing values, and no missing data were detected. Several preprocessing steps were completed to prepare the data for modeling, which includes:
     - identify any missing values 
     - creating new columns for month, day and year from the date fields
     - constructing age groups and corresponding categorical labels to better segment customer demographics 
@@ -144,7 +144,7 @@ Overall, Gender improves prediction for only one category but cannot independent
 Overall, most variables exhibit low to moderate correlation, with one exception.
 
 - **Pair Plot** provides insight into how well these variables separate product categories and whether natural clustering exists.
-    !["Pair Plot"](images/pairplot.png)
+    !["Pair Plot"](images/pair_plot.png)
 
 Single predictors are insufficient on their own, reinforcing the need for multivariate models rather than rule-based classification.
 
@@ -174,7 +174,7 @@ The model used the following predictors:
 
 ### Modeling Approach
 
-Two classification models were developed and evaluated: 
+Two classification models were developed and evaluated:
     - Logistic Regression (linear model)
     - Random Forest Classifier (non-linear model)
 
@@ -269,7 +269,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 | Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
 | Nicole Latendresse | [Video Link](PASTE_LINK_HERE) |
 | Mary Randle  | https://youtu.be/yyoIqQcskZo |
-| Pavi Chandrasegaram  | [Video Link](PASTE_LINK_HERE) |
+| Pavi Chandrasegaram  | [Video Link](https://www.youtube.com/watch?v=yeGJQYe85bE) |
 
 ---
 
