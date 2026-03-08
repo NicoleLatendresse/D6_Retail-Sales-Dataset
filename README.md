@@ -265,7 +265,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 
 | Name | Link |
 |-----|-----|
-| Aram Dezfuli | [Video Link](PASTE_LINK_HERE) |
+| Aram Dezfuli | https://www.loom.com/share/ac35881ccec34d638c61cb406a73945f |
 | Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
 | Nicole Latendresse | [Video Link](PASTE_LINK_HERE) |
 | Mary Randle  | https://youtu.be/yyoIqQcskZo |
@@ -284,7 +284,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 3. Install dependencies
    pip install -r requirements.txt
 
-4. Open the Jupyter notebooks in the `experiments/` folder to reproduce the analysis.
+4. Open the Jupyter notebooks in the `Jupyter Notebooks/` folder to reproduce the analysis.
 
 
 
