@@ -120,7 +120,7 @@ Exploratory data analysis was conducted to understand the distribution of demogr
 
 ### Key Observations
 
-	!["Distribution of Key Variables"](images/2D_column_plot3_key_variables.png)
+!["Key Variables"](images/2D_column_plot3_key_variables.png)
 
 - **Age distribution** across product categories shows broadly similar patterns, with moderate differences in central tendency and spread. Overall, age contributes contextual information that may improve classification performance when combined with other demographic and transactional features.
 - **Purchase quantity** is typically small, with most customers buying three or fewer items.
@@ -130,7 +130,7 @@ These distributional patterns suggest that behavioral variables carry stronger p
 
 
 - **Gender differences** appear primarily in Beauty purchases, which show a female skew.
-	!["Distribution of Product Category by Gender"](images/2D_column_plot4_prodcat_gender.png)
+!["Distribution of Product Category by Gender"](images/2D_column_plot4_prodcat_gender.png)
 
 Despite some observable patterns, product categories show significant overlap across demographic and transactional variables.
 
@@ -139,12 +139,12 @@ This suggests that predicting product category will require combining multiple f
 Overall, Gender improves prediction for only one category but cannot independently determine product choice. Therefore, gender shall be treated as a complementary predictor to enhance model performance when combined with behavioral features such as spending and quantity purchased.
 
 - **Correlation Matrix** highlights the relationships among key numerical predictors and provides insight into potential redundancy and multicollinearity.
-    !["Correlation Matrix"](images/heatmap_plot2_correlationmatrix.png)
+!["Correlation Matrix"](images/heatmap_plot2_correlationmatrix.png)
 
 Overall, most variables exhibit low to moderate correlation, with one exception.
 
 - **Pair Plot** provides insight into how well these variables separate product categories and whether natural clustering exists.
-    !["Pair Plot"](images/pair_plot.png)
+!["Pair Plot"](images/pair_plot.png)
 
 Single predictors are insufficient on their own, reinforcing the need for multivariate models rather than rule-based classification.
 
