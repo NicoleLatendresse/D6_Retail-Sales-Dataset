@@ -108,7 +108,7 @@ The project was implemented using the following tools and libraries:
 
 # Data Cleaning 
 
-The dataset was first examined for missing values, and no missing data were detected.  Several preprocessing steps were completed to prepare the data for modeling, which includes:
+The dataset was first examined for missing values, and no missing data were detected. Several preprocessing steps were completed to prepare the data for modeling, which includes:
     - identify any missing values 
     - creating new columns for month, day and year from the date fields
     - constructing age groups and corresponding categorical labels to better segment customer demographics 
@@ -174,7 +174,7 @@ The model used the following predictors:
 
 ### Modeling Approach
 
-Two classification models were developed and evaluated: 
+Two classification models were developed and evaluated:
     - Logistic Regression (linear model)
     - Random Forest Classifier (non-linear model)
 
@@ -265,11 +265,11 @@ Future work using larger and more behaviorally rich datasets could significantly
 
 | Name | Link |
 |-----|-----|
-| Aram Dezfuli | [Video Link](PASTE_LINK_HERE) |
+| Aram Dezfuli | https://www.loom.com/share/ac35881ccec34d638c61cb406a73945f |
 | Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
-| Nicole Latendresse | [Video Link](PASTE_LINK_HERE) |
-| Mary Randle  | [Video Link](PASTE_LINK_HERE) |
-| Pavi Chandrasegaram  | [Video Link](PASTE_LINK_HERE) |
+| Nicole Latendresse | [Video Link](https://www.loom.com/share/8c183674ec5846458100d308bc3607ba) |
+| Mary Randle  | https://youtu.be/yyoIqQcskZo |
+| Pavi Chandrasegaram  | [Video Link](https://www.youtube.com/watch?v=yeGJQYe85bE) |
 
 ---
 
@@ -284,7 +284,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 3. Install dependencies
    pip install -r requirements.txt
 
-4. Open the Jupyter notebooks in the `experiments/` folder to reproduce the analysis.
+4. Open the Jupyter notebooks in the `Jupyter Notebooks/` folder to reproduce the analysis.
 
 
 
