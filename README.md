@@ -268,7 +268,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 | Aram Dezfuli | [Video Link](PASTE_LINK_HERE) |
 | Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
 | Nicole Latendresse | [Video Link](PASTE_LINK_HERE) |
-| Mary Randle  | [Video Link](PASTE_LINK_HERE) |
+| Mary Randle  | https://youtu.be/yyoIqQcskZo |
 | Pavi Chandrasegaram  | [Video Link](PASTE_LINK_HERE) |
 
 ---
