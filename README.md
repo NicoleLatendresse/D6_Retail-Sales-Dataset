@@ -199,7 +199,7 @@ Data visualization played an important role in both **exploring patterns** and *
 Visualizations were created using **Matplotlib, Seaborn, and Plotly**, with attention to readability and accessibility, including color-blind-friendly palettes.
 
 
-One key visualization is a **groped bar chart** illustrating the distribution of product category purchases across five age groups: 18–24, 25–34, 35–44, 45–54 and 55–64.   
+One key visualization is a **grouped bar chart** illustrating the distribution of product category purchases across five age groups: 18–24, 25–34, 35–44, 45–54 and 55–64.   
 
 ![Grouped bar graphs showing Beauty, Clothing, and Electronics purchases across five age-groups for Female and Male customer groups.](images/purchasing_trends_by_age_group.png)
 
@@ -266,7 +266,7 @@ Future work using larger and more behaviorally rich datasets could significantly
 | Name | Link |
 |-----|-----|
 | Aram Dezfuli | https://www.loom.com/share/ac35881ccec34d638c61cb406a73945f |
-| Junaid Ghani | [Video Link](PASTE_LINK_HERE) |
+| Junaid Ghani | [Video Link](https://youtu.be/l3G2twMO_T8) |
 | Nicole Latendresse | [Video Link](https://www.loom.com/share/8c183674ec5846458100d308bc3607ba) |
 | Mary Randle  | https://youtu.be/yyoIqQcskZo |
 | Pavi Chandrasegaram  | [Video Link](https://www.youtube.com/watch?v=yeGJQYe85bE) |
