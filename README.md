@@ -253,7 +253,7 @@ Overall, incorporating richer behavioral data would significantly improve the ab
 
 This project explored whether customer demographics and transaction data could predict product category purchases.
 
-The classification model achieved modest predictive performance, only slightly exceeding random guessing. This outcome reflects the limited predictive information available in the dataset, particularly the absence of repeat customer behavior and the restricted number of product categories.
+The classification model achieved modest predictive performance, only slightly exceeding random guessing or naive baseline model prediction. This outcome reflects the limited predictive information available in the dataset, particularly the absence of repeat customer behavior and the restricted number of product categories.
 
 Despite these limitations, the project demonstrates the application of a full data science workflow, including exploratory analysis, visualization, feature preparation, and classification modeling.
 
@@ -272,6 +272,104 @@ Future work using larger and more behaviorally rich datasets could significantly
 | Pavi Chandrasegaram  | https://www.youtube.com/watch?v=yeGJQYe85bE |
 
 ---
+
+## Project Task Breakdown & Roles
+
+### 1. README  (Midpoint Submission)
+- Lead – Aram
+- Mary – Review
+- Tasks:
+    - Contents 1-2-3 - Pavi, Mary, Nicole
+    - Other Contents - Aram
+    - Compile - Aram
+    - Review - Mary
+
+### 2. Data Cleanup & Preparation
+- Lead: Mary
+- Reviewer: Nicole
+- Tasks:
+    - Data validation
+    - Feature formatting
+    - Outlier check
+    - Data consistency verification
+
+### 3. Exploratory Data Analysis (EDA)
+- Lead: Junaid
+- Reviewer: Pavi
+- Tasks:
+    - Visual exploration
+    - Distribution analysis
+    - Correlation analysis
+    - Outlier detection
+
+### 4. Feature Engineering & Processing
+- Lead: Nicole – Lead
+- Reviewer: Mary
+- Support: Aram
+- Tasks:
+    - Encoding categorical variables
+    - Scaling if required
+    - Train/test split preparation
+
+### 5. Classification Modeling
+- Lead: Nicole
+- Reviewer: Aram, Junaid
+- Models:
+    - Logistic Regression
+    - Random Forest
+
+### 6. Training & Cross-Validation Implementation
+- Lead: Nicole
+- Reviewer: Aram, Pavi 
+- Tasks
+    - k-fold cross-validation
+    - Model comparison
+    - Performance metrics evaluation
+
+### 7. Visualization & Styling
+- Lead: Pavi
+- Support: Junaid
+- Reviewer: Junaid
+- Tasks:
+    - Plot styling
+    - Clean presentation charts
+    - Model comparison visuals
+
+### 8. Reproducibility & Repository Cleanup
+- Lead: Aram (-> Junaid)
+- Reviewer: Junaid (-> Aram)
+- Tasks: 
+    - Folder structure cleanup
+    - Removing duplicate plots
+    - Ensuring clear README instructions
+    - Requirements.txt validation
+
+### 9. Final Submission - README file 
+- Lead: Aram
+- Reviewer: Mary
+- Tasks: 
+  - Review course slides and provided examples
+  - Confirm submission expectations with instructor and Learning Support (LS)
+  - Draft and structure final README content
+  - Incorporate feedback
+  - Final formatting and repository cleanup
+
+
+### 10. Final Live Presentation 
+- Lead: Mary
+- Supports: Junaid, Aram
+
+### 11. Final Code Check and README update
+- Lead: Aram
+- Support: Mary
+
+### 12. Post Review Issue Resolutions
+- Lead: Aram
+- Support: Team
+
+
+---
+
 
 ## Setup Instructions (Optional)
 
