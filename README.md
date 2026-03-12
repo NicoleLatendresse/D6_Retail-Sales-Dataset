@@ -369,9 +369,13 @@ Future work using larger and more behaviorally rich datasets could significantly
 
 
 ---
+## Python Version
 
+> ⚠️ **Python version requirement:** Tested with **Python 3.13**. Expected to work with **Python 3.11 or higher**.
 
 ## Setup Instructions (Optional)
+
+> ⚠️ Make sure you are using **Python 3.11 or higher**.
 
 1. Clone the repository
    git clone https://github.com/your-repo/D6_Retail-Sales-Dataset.git
