@@ -379,10 +379,25 @@ Future work using larger and more behaviorally rich datasets could significantly
 2. Navigate to the project folder
    cd D6_Retail-Sales-Dataset
 
-3. Install dependencies
+3. (Optional) Remove old environment folders
+    If you have a previous virtual environment (e.g., lcr-env or visualization-env), you can delete its folder manually to avoid conflicts.
+
+4. Create a new virtual environment
+    python -m venv ds6-env
+
+5. Activate the environment
+    On Windows (PowerShell):
+        .\ds6-env\Scripts\activate
+    On macOS/Linux:
+        source ds6-env/bin/activate
+
+6. Install dependencies
    pip install -r requirements.txt
 
-4. Open the Jupyter notebooks in the `Jupyter Notebooks/` folder to reproduce the analysis.
+7. Register the environment as a Jupyter kernel
+    python -m ipykernel install --user --name=ds6-env --display-name "DS6 project"
+
+8. Open the Jupyter notebooks in the `Jupyter Notebooks/` folder, select the DS6 project kernel, and run the notebooks.
 
 
 
